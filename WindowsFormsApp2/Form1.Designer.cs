@@ -29,8 +29,8 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gpbdatoscliente = new System.Windows.Forms.GroupBox();
@@ -95,15 +95,17 @@ namespace WindowsFormsApp2
             this.button1 = new System.Windows.Forms.Button();
             this.psearch = new System.Windows.Forms.Panel();
             this.panelprinters = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtpwacc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtuseracc = new System.Windows.Forms.TextBox();
             this.btnacc = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnbackup = new System.Windows.Forms.Button();
+            this.lblwpw = new System.Windows.Forms.Label();
             this.lblwmail = new System.Windows.Forms.Label();
             this.btnconfig = new System.Windows.Forms.Button();
             this.btnclients = new System.Windows.Forms.Button();
@@ -118,7 +120,6 @@ namespace WindowsFormsApp2
             this.btnimprimir = new System.Windows.Forms.Button();
             this.btnnuevalocal = new System.Windows.Forms.Button();
             this.btnaddclient = new System.Windows.Forms.Button();
-            this.lblwpw = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gpbdatoscliente.SuspendLayout();
             this.gpbcat.SuspendLayout();
@@ -143,23 +144,23 @@ namespace WindowsFormsApp2
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.Location = new System.Drawing.Point(15, 61);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
@@ -856,6 +857,56 @@ namespace WindowsFormsApp2
             this.panelprinters.Size = new System.Drawing.Size(446, 247);
             this.panelprinters.TabIndex = 38;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Window;
+            this.button4.Location = new System.Drawing.Point(216, 106);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(20, 22);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "<";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
+            this.button2.Location = new System.Drawing.Point(216, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(20, 22);
+            this.button2.TabIndex = 41;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(238, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(113, 13);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "Impresoras Habilitadas";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(24, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(120, 13);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Impresoras Inhabilitadas";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -905,55 +956,31 @@ namespace WindowsFormsApp2
             this.btnacc.UseVisualStyleBackColor = false;
             this.btnacc.Click += new System.EventHandler(this.btnacc_Click);
             // 
-            // label20
+            // btnbackup
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(24, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(120, 13);
-            this.label20.TabIndex = 44;
-            this.label20.Text = "Impresoras Inhabilitadas";
+            this.btnbackup.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnbackup.FlatAppearance.BorderSize = 0;
+            this.btnbackup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btnbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackup.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnbackup.Location = new System.Drawing.Point(727, 41);
+            this.btnbackup.Name = "btnbackup";
+            this.btnbackup.Size = new System.Drawing.Size(111, 25);
+            this.btnbackup.TabIndex = 44;
+            this.btnbackup.Text = "Backup";
+            this.btnbackup.UseVisualStyleBackColor = false;
+            this.btnbackup.Click += new System.EventHandler(this.btnbackup_Click);
             // 
-            // label21
+            // lblwpw
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(238, 17);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 13);
-            this.label21.TabIndex = 45;
-            this.label21.Text = "Impresoras Habilitadas";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(216, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 22);
-            this.button2.TabIndex = 41;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(216, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(20, 22);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "<";
-            this.button4.UseVisualStyleBackColor = false;
+            this.lblwpw.Image = global::WindowsFormsApp2.Properties.Resources.exclamation_mark2;
+            this.lblwpw.Location = new System.Drawing.Point(297, 137);
+            this.lblwpw.Margin = new System.Windows.Forms.Padding(0);
+            this.lblwpw.Name = "lblwpw";
+            this.lblwpw.Size = new System.Drawing.Size(27, 24);
+            this.lblwpw.TabIndex = 45;
+            this.lblwpw.Text = "        ";
             // 
             // lblwmail
             // 
@@ -1207,16 +1234,6 @@ namespace WindowsFormsApp2
             this.btnaddclient.UseVisualStyleBackColor = false;
             this.btnaddclient.Click += new System.EventHandler(this.btnaddclient_Click);
             // 
-            // lblwpw
-            // 
-            this.lblwpw.Image = global::WindowsFormsApp2.Properties.Resources.exclamation_mark2;
-            this.lblwpw.Location = new System.Drawing.Point(297, 137);
-            this.lblwpw.Margin = new System.Windows.Forms.Padding(0);
-            this.lblwpw.Name = "lblwpw";
-            this.lblwpw.Size = new System.Drawing.Size(27, 24);
-            this.lblwpw.TabIndex = 45;
-            this.lblwpw.Text = "        ";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1225,6 +1242,7 @@ namespace WindowsFormsApp2
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1130, 614);
+            this.Controls.Add(this.btnbackup);
             this.Controls.Add(this.btnacc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpwacc);
@@ -1362,6 +1380,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblwmail;
         private System.Windows.Forms.Label lblwpw;
+        private System.Windows.Forms.Button btnbackup;
     }
 }
 

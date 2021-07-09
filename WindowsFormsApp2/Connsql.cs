@@ -11,7 +11,19 @@ namespace WindowsFormsApp2
 {
     class Connsql
     {
-        private SqlConnection conn = new SqlConnection("Data Source=DESKTOP-F3N9MCR;Initial Catalog=PPDB;Integrated Security=True");
+        public SqlConnection dbConnect(string database)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-F3N9MCR;Initial Catalog="+database+";Integrated Security=True");
+            return conn;
+
+        }
+        public void dbDisconnect(string database)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-F3N9MCR;Initial Catalog=" + database + ";Integrated Security=True");
+            conn.Close();
+        }
+
+       //private SqlConnection conn = new SqlConnection("Data Source=DESKTOP-F3N9MCR;Initial Catalog=PPDB;Integrated Security=True");
         public void InsertCliente(Cliente cliente)
         {
             try
@@ -601,12 +613,12 @@ namespace WindowsFormsApp2
 
             return dt;
         }
-        public bool SearchMail(string mail)
+        public bool SearchMail(string mail, string db)
         {
             bool bEnc = false;
             try
             {
-                conn.Open();
+                dbConnect(db);
                 string query = @" SELECT * FROM Usuarios 
                                 WHERE mail = " + "'"+mail+"'";
 
@@ -999,5 +1011,19 @@ namespace WindowsFormsApp2
 
             return dt;
         }
+        public void backUp()
+        {
+            string database = conn.Database.ToString();
+            string query = @"
+                    BACKUP DATABASE [" + database + "] TO DISK = 'C:\\backup\\testDB.bak' WITH FORMAT;";
+        
+            conn.Open();
+            
+            SqlCommand command = new SqlCommand(query, conn);
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
     }
 }

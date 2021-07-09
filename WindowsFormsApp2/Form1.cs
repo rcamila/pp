@@ -1,6 +1,8 @@
 ﻿using DGVPrinterHelper;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -570,9 +572,7 @@ namespace WindowsFormsApp2
             else
             {
                 btnusers1.Visible = true; btncat.Visible = true;
-            }
-           
-          
+            }                   
         }
         private void btnusers1_Click(object sender, EventArgs e)
         {
@@ -1083,6 +1083,10 @@ namespace WindowsFormsApp2
             {
                 lblwpw.Visible = false;
             }
+        }
+        private void btnbackup_Click(object sender, EventArgs e)
+        {
+            connsql.backUp();
         }
     }
 }
